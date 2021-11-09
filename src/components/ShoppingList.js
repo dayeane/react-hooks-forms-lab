@@ -25,7 +25,7 @@ function ShoppingList({ items, setItems }) {
   });
 
   itemsToDisplay = itemsToDisplay.filter((item) => {
-    return item.name.includes(searchInputName);
+    return item.name.toLowerCase().includes(searchInputName.toLowerCase());
   });
 
   function handleNewCategoryChange(event) {
